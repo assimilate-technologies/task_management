@@ -1,7 +1,7 @@
 app_name = "task_management"
-app_title = "Task_Management"
+app_title = "Task_management"
 app_publisher = "Assimilator"
-app_description = "This is Task Based Application"
+app_description = "This is Task MAnagement app"
 app_email = "rutujasangar1770@gmail.com"
 app_license = "mit"
 
@@ -15,7 +15,7 @@ app_license = "mit"
 # 	{
 # 		"name": "task_management",
 # 		"logo": "/assets/task_management/logo.png",
-# 		"title": "Task_Management",
+# 		"title": "Task_management",
 # 		"route": "/task_management",
 # 		"has_permission": "task_management.api.permission.has_app_permission"
 # 	}

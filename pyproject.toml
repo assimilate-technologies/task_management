@@ -3,7 +3,7 @@ name = "task_management"
 authors = [
     { name = "Assimilator", email = "rutujasangar1770@gmail.com"}
 ]
-description = "This is Task Based Application"
+description = "This is Task MAnagement app"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
