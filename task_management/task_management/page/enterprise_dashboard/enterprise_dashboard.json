@@ -1,0 +1,47 @@
+{
+ "content": null,
+ "creation": "2026-06-15 17:53:06.046414",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-06-16 18:33:02.949442",
+ "modified_by": "Administrator",
+ "module": "Task Management",
+ "name": "enterprise_dashboard",
+ "owner": "Administrator",
+ "page_name": "enterprise_dashboard",
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Task Manager"
+  },
+  {
+   "role": "Task User"
+  },
+  {
+   "role": "Task Viewer"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Task User"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Enterprise Dashboard"
+}

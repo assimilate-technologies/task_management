@@ -1,0 +1,131 @@
+/* Dashboard Layout */
+.dashboard-container {
+    padding: 20px;
+    background-color: #f4f7fb;
+    min-height: 100vh;
+}
+
+/* Sticky Filter Bar */
+.sticky-filter-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+/* Grid System */
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.dashboard-col {
+    flex: 1;
+    min-width: 450px; /* Responsive threshold */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media (max-width: 992px) {
+    .dashboard-col {
+        min-width: 100%;
+    }
+}
+
+/* Modern Cards */
+.dashboard-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid #edf2f7;
+    background-color: #ffffff;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* List Styling */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f7fafc;
+    padding: 16px 20px;
+    transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f8fafc;
+    transform: translateX(5px);
+    z-index: 1;
+    box-shadow: -5px 0 0 #3182ce;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge-pill {
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge-critical { background-color: #fed7d7; color: #9b2c2c; }
+.badge-overdue { background-color: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
+.badge-upcoming { background-color: #ebf8ff; color: #2b6cb0; }
+
+/* Chart Alignment */
+.chart-body {
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Customization */
+#delay-filters .btn {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+#delay-filters .btn.active {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}

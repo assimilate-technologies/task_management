@@ -4,3 +4,6 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+
+#task_management.patches.add_field_more_in_tasks
+

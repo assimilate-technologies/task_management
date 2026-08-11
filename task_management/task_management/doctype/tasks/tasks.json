@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-13 10:00:58.819182",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_name",
+  "column_break_voje",
+  "task_type",
+  "external",
+  "section_break_caqg",
+  "reporting_date",
+  "column_break_uylo",
+  "customer",
+  "column_break_lhfq",
+  "project_name",
+  "section_break_zrsv",
+  "priority",
+  "column_break_kuvg",
+  "action",
+  "column_break_szqz",
+  "status",
+  "section_break_wrue",
+  "expected_resolution_date",
+  "assigned_to",
+  "description",
+  "column_break_yxld",
+  "delayed_by",
+  "days",
+  "remark",
+  "column_break_chvr",
+  "deliver_date",
+  "total_hours",
+  "section_break_qcxd",
+  "time_logs"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.external==1",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Project Name",
+   "options": "Project"
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Link",
+   "label": "Task Type",
+   "options": "Task Type"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Table MultiSelect",
+   "label": "Assigned To",
+   "options": "Assign Users Task"
+  },
+  {
+   "fieldname": "reporting_date",
+   "fieldtype": "Date",
+   "label": "Reporting Date"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_resolution_date",
+   "fieldtype": "Date",
+   "label": "Expected Resolution Date"
+  },
+  {
+   "fieldname": "delayed_by",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Delayed By"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Completed\nImportant-Urgent\nImportant-Not Urgent\nNot Important-Not Urgent"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "label": "Action",
+   "options": "Bravo!!\nSchedule it\nHold/Delete\nDo it First"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Moved to Production\nDesign Completed\nTesting completed\nCustomer Walkthrough Scheduled\nMoved to Production\nIn process\nCustomer Walkthrough Pending\nIn concept\nIssue Reported\nPushed for Development\nTicket Raised-Waiting for Priority assignment"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_yxld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_chvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deliver_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date "
+  },
+  {
+   "fieldname": "column_break_voje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wrue",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_caqg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uylo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lhfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zrsv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kuvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_szqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "external",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "External"
+  },
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "label": "Task Name"
+  },
+  {
+   "fieldname": "time_logs",
+   "fieldtype": "Table",
+   "label": "Time Logs",
+   "options": "Assign Users Task"
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Float",
+   "label": "Total Hours",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_qcxd",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-22 13:05:49.428499",
+ "modified_by": "Administrator",
+ "module": "Task Management",
+ "name": "Tasks",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "task_name",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "task_name",
+ "track_changes": 1
+}
