@@ -180,7 +180,8 @@
    "fieldname": "total_hours",
    "fieldtype": "Float",
    "label": "Total Hours",
-   "precision": "1"
+   "precision": "1",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_qcxd",

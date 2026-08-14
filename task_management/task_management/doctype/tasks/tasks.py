@@ -1,5 +1,7 @@
+import frappe
+from frappe import _
 from frappe.model.document import Document
-from frappe.utils import date_diff, today
+from frappe.utils import date_diff, flt, today
 
 
 class Tasks(Document):
@@ -8,6 +10,8 @@ class Tasks(Document):
 
         self.calculate_days()
         self.calculate_delay()
+        self.calculate_total_hours()
+        self.validate_hours_spent()
 
     # ====================================
     # Calculate Days
@@ -51,3 +55,28 @@ class Tasks(Document):
 
         # Only overdue
         self.delayed_by = max(0, delay)
+
+    # ====================================
+    # Calculate Total Hours
+    # ====================================
+
+    def calculate_total_hours(self):
+
+        self.total_hours = sum(
+            flt(log.hours_spent)
+            for log in self.get("time_logs")
+        )
+
+    # ====================================
+    # Validate Hours Spent
+    # ====================================
+
+    def validate_hours_spent(self):
+
+        for log in self.get("time_logs"):
+
+            if not log.hours_spent or log.hours_spent <= 0:
+
+                frappe.throw(
+                    _("Row {0}: Hours Spent is mandatory for each time log.").format(log.idx)
+                )
